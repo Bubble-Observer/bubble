@@ -1,0 +1,168 @@
+{
+  "generated_at": "2026-08-21T00:00:00+00:00",
+  "implementation_head": "6b317fd1ea1c4d722bc4a37c68c7c649f50d9d9b",
+  "artifact_generation_head": "6b317fd1ea1c4d722bc4a37c68c7c649f50d9d9b",
+  "review_head": null,
+  "scenarios": [
+    {
+      "key": "G1",
+      "title": "重复事件复用与更正",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "objects_after": 3,
+        "objects_created": 0,
+        "assertions_after": 2,
+        "object_ref_assertions": 0,
+        "literal_entity_hints": 0,
+        "supersede_formed": 1,
+        "referents_reused": 1,
+        "turns": 3
+      }
+    },
+    {
+      "key": "G2",
+      "title": "同名 concept 显式决策",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "objects_after": 2,
+        "objects_created": 1,
+        "assertions_after": 1,
+        "object_ref_assertions": 1,
+        "literal_entity_hints": 0,
+        "distinct_decision": 1,
+        "referents_reused": 1,
+        "inspect_uses": 1,
+        "turns": 4
+      }
+    },
+    {
+      "key": "G3",
+      "title": "关系表达",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "objects_after": 3,
+        "objects_created": 0,
+        "assertions_after": 3,
+        "object_ref_assertions": 3,
+        "literal_entity_hints": 0,
+        "referents_reused": 6,
+        "turns": 2
+      }
+    },
+    {
+      "key": "G4",
+      "title": "零连接对象处理",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "objects_after": 2,
+        "objects_created": 2,
+        "assertions_after": 1,
+        "object_ref_assertions": 1,
+        "blockers_reported": 1,
+        "blockers_fixed": 1,
+        "inspect_uses": 1,
+        "inspect_then_modify": 1,
+        "turns": 4
+      }
+    },
+    {
+      "key": "G5",
+      "title": "跨 wake 连续性",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "wakes": 3,
+        "commits": 2,
+        "objects_after": 2,
+        "objects_created": 1,
+        "assertions_after": 2,
+        "object_ref_assertions": 2,
+        "referents_reused": 5,
+        "staged_unpublished": 1,
+        "abandons": 1,
+        "turns": 5
+      }
+    },
+    {
+      "key": "G6",
+      "title": "主动更正与自我复查",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "objects_after": 1,
+        "objects_created": 0,
+        "assertions_after": 2,
+        "object_ref_assertions": 0,
+        "literal_entity_hints": 0,
+        "supersede_formed": 1,
+        "referents_reused": 2,
+        "inspect_uses": 1,
+        "diff_uses": 1,
+        "inspect_then_modify": 1,
+        "drops": 1,
+        "turns": 5
+      }
+    },
+    {
+      "key": "G7",
+      "title": "恢复与人工恢复",
+      "passed": true,
+      "failures": [],
+      "metrics": {
+        "wakes": 2,
+        "commits": 1,
+        "objects_after": 2,
+        "objects_created": 1,
+        "assertions_after": 1,
+        "object_ref_assertions": 1,
+        "referents_reused": 1,
+        "staged_unpublished": 2,
+        "resumes": 1,
+        "abandons": 2,
+        "owner_mismatch_refusals": 1,
+        "turns": 3
+      }
+    }
+  ],
+  "metrics": {
+    "referents": {
+      "reuse_count": 16,
+      "reuse_rate": 0.762
+    },
+    "duplicate_escape_count": 0,
+    "object_ref_assertions": {
+      "count": 8,
+      "rate": 0.667
+    },
+    "literal_entity_hint_count": 0,
+    "supersede": {
+      "formed_count": 2
+    },
+    "inspect_use_count": 3,
+    "diff_use_count": 1,
+    "inspect_diff_then_modify_count": 2,
+    "blockers": {
+      "reported": 1,
+      "fixed": 1,
+      "fix_rate": 1.0
+    },
+    "staged_unpublished_count": 3,
+    "resume_count": 1,
+    "abandon_count": 3,
+    "unhandled_exception_count": 0,
+    "formal_commits_per_wake": {
+      "commits": 8,
+      "wakes": 10
+    },
+    "turns": {
+      "total": 26
+    },
+    "tokens": "fixture (scripted model; not measured)",
+    "cost_usd": "fixture (scripted model; 0.0 by construction)"
+  },
+  "interpretation_boundary": "Offline scripted-model scenarios prove the tools/feedback support the target behaviors, the state machine and formal-graph results are correct, and the golden paths are reproducible. They do NOT prove a real LLM will take these actions — real agent behavior requires the live canary."
+}

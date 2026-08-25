@@ -1,0 +1,59 @@
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.yaml
+*.session
+*.cookie
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+
+# Test artifacts
+.pytest_cache/
+.pytest_tmp/
+.test_artifacts/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Tooling
+.ruff_cache/
+.mypy_cache/
+
+# Runtime databases — world and runtime SQLite files are never committed
+*.sqlite3
+*.sqlite3-journal
+*.sqlite3-wal
+*.sqlite3-shm
+data/*
+!data/run-configs/
+data/run-configs/*
+!data/run-configs/agents/
+data/run-configs/agents/*
+!data/run-configs/agents/lol_cn.json
+
+# web/data is the published edition feed for the GitHub Pages viewer —
+# its JSON skeletons and README are committed, the directory is re-included
+# here so future edition-*.json outputs can be committed with them.
+!web/data/
+!web/data/*.json
+!web/data/README.md
+logs/
+
+# IDE/OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

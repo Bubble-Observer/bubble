@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Bubble · Agent 大厅</title>
+    <link rel="stylesheet" href="/static/app.css?v=20260824-5" />
+  </head>
+  <body class="lobby-mode">
+    <header class="app-header">
+      <button class="brand" id="brand-home-button" type="button" aria-label="返回 Bubble 的 Agent 大厅">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy"><strong>Bubble</strong><small>个人 Agent 控制台</small></span>
+      </button>
+      <nav class="top-navigation" aria-label="全局导航">
+        <button class="top-nav-button active" id="lobby-nav-button" type="button">Agent 大厅</button>
+        <button class="top-nav-button workspace-only" id="current-agent-nav-button" type="button" hidden>当前 Agent</button>
+      </nav>
+      <div class="header-actions">
+        <button class="button ghost" id="connections-button" type="button">连接与凭据</button>
+        <button class="button primary" id="new-agent-button" type="button">新建 Agent</button>
+      </div>
+    </header>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <main class="console-shell">
+      <aside class="sidebar" aria-label="Agent 导航">
+        <section class="sidebar-section">
+          <div class="sidebar-heading">
+            <span>我的 Agent</span>
+            <button class="icon-button" type="button" data-new-agent aria-label="新建 Agent">+</button>
+          </div>
+          <div class="agent-list" id="agent-list"></div>
+        </section>
+
+        <nav class="workspace-navigation" id="workspace-navigation" aria-label="当前 Agent 页面">
+          <button class="workspace-nav-item active" type="button" data-workspace-view="start">
+            <span aria-hidden="true">✦</span>开始任务
+          </button>
+          <button class="workspace-nav-item" type="button" data-workspace-view="memory">
+            <span aria-hidden="true">◎</span>记忆图谱
+          </button>
+          <button class="workspace-nav-item" type="button" data-workspace-view="history">
+            <span aria-hidden="true">◷</span>运行记录
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <p id="connection-status">正在检查本地服务…</p>
+          <p id="writer-note">当前仅查看与配置，不改动 Agent 核心链路。</p>
+        </div>
+      </aside>
+
+      <div class="workspace">
+        <section class="agent-lobby" id="agent-lobby">
+          <div class="lobby-hero">
+            <div>
+              <p class="eyebrow">Your observers</p>
+              <h1>你的 Agent 大厅</h1>
+              <p class="hero-copy">每个 Agent 都有自己的观察领域、运行偏好与独立记忆。选择一个继续，或用两项信息创建新的长期观察者。</p>
+            </div>
+            <button class="hero-create-card" id="lobby-new-agent" type="button">
+              <strong>＋ 新建 Agent</strong>
+            </button>
+          </div>
+          <div class="agent-gallery" id="agent-gallery"></div>
+          <footer class="lobby-section-heading">
+            <span><b id="agent-count">0</b> 个 Agent · 独立记忆数据库</span>
+            <span>本地运行 · 核心链路保持不变</span>
+          </footer>
+        </section>
+
+        <section class="agent-workspace" id="agent-workspace" hidden>
+          <header class="workspace-header">
+            <button class="back-button" id="back-to-lobby" type="button">← Agent 大厅</button>
+            <div class="workspace-identity">
+              <span class="profile-chip" id="profile-chip">Agent</span>
+              <div>
+                <p class="eyebrow">当前 Agent</p>
+                <h1 id="profile-title">Agent</h1>
+              </div>
+            </div>
+            <button class="button ghost" id="header-settings-button" type="button">Agent 设置</button>
+          </header>
+
+          <div class="console-content" id="console-content" hidden>
+            <section class="workspace-view" data-workspace-panel="start">
+              <div class="start-intro">
+                <div>
+                  <p class="eyebrow">Current observer</p>
+                  <h2>让它继续看世界</h2>
+                  <p>可以直接启动，也可以只给这一次观察一个轻量起点。</p>
+                </div>
+                <button class="text-button" id="reset-perspective-button" type="button">恢复默认</button>
+              </div>
+
+              <section class="run-panel" id="run-panel">
+                <form class="run-form" id="run-form">
+                  <label class="perspective-field">
+                    <span class="sr-only">本次观察目标</span>
+                    <textarea name="perspective" rows="4" placeholder="可以直接开始，或者告诉它这次特别留意什么……"></textarea>
+                  </label>
+
+                  <div class="mode-selector" role="radiogroup" aria-label="探索方式">
+                    <label class="mode-card" data-mode="broad">
+                      <input type="radio" name="mode" value="broad" checked />
+                      <span class="mode-symbol broad" aria-hidden="true">✦</span>
+                      <span><strong>看看最近有什么变化</strong><small>自由观察并发现新线索</small></span>
+                    </label>
+                    <label class="mode-card" data-mode="deep">
+                      <input type="radio" name="mode" value="deep" />
+                      <span class="mode-symbol deep" aria-hidden="true">◎</span>
+                      <span><strong>围绕一个对象继续深入</strong><small>从已有记忆选择起点</small></span>
+                    </label>
+                  </div>
+
+                  <div class="wake-options" id="wake-options" hidden>
+                    <label>围绕记忆对象继续
+                      <select name="object_id" id="object-id-field"></select>
+                    </label>
+                  </div>
+
+                  <fieldset class="source-selector">
+                    <legend>信息来源</legend>
+                    <input type="hidden" name="adapters" value="public-web" />
+                    <label><input type="checkbox" value="public-web" data-role="run-adapter" checked /><span>公开网络</span></label>
+                    <label><input type="checkbox" value="bilibili" data-role="run-adapter" /><span>哔哩哔哩</span></label>
+                    <label><input type="checkbox" value="hupu" data-role="run-adapter" /><span>虎扑</span></label>
+                    <label><input type="checkbox" value="nga" data-role="run-adapter" /><span>NGA</span></label>
+                  </fieldset>
+
+                  <div class="effective-row" aria-label="本次实际配置">
+                    <span>方式 <b id="effective-mode">广泛探索</b></span>
+                    <span>来源 <b id="effective-sources">公开网络</b></span>
+                    <span>轮次兜底 <b id="effective-turns">96</b></span>
+                    <span>Token 边界 <b>70万提醒 / 80万停止</b></span>
+                    <span>成本上限 <b id="effective-cost">不限制</b></span>
+                    <span>思考 <b id="effective-thinking">关闭</b></span>
+                  </div>
+
+                  <details class="advanced-options">
+                    <summary>专业选项</summary>
+                    <div class="advanced-grid">
+                      <label>轮次兜底<input type="number" name="max_turns" min="1" max="200" /></label>
+                      <label>可选成本上限（美元）<input type="number" name="max_cost_usd" min="0.01" max="1000" step="0.01" placeholder="留空表示不限制" /></label>
+                      <label class="check-row"><input type="checkbox" name="thinking" />启用深度思考</label>
+                      <label>推理强度<select name="reasoning_effort" disabled><option value="">由模型决定</option><option value="high">High</option><option value="max">Max</option></select></label>
+                    </div>
+                    <p class="advanced-note">运行主要由上下文 Token 控制：约 70 万 Token 提醒，80 万 Token 硬停止。轮次和成本只是额外兜底；深度思考会增加延迟与消耗。</p>
+                  </details>
+
+                  <div class="run-actions">
+                    <p id="launch-hint">配置会保存在当前浏览器，启动前仍可预览完整提示词。</p>
+                    <button class="button ghost" id="preview-prompt-button" type="button">预览提示词</button>
+                    <button class="button primary large" id="start-run-button" type="submit">开始探索 <span aria-hidden="true">→</span></button>
+                  </div>
+                </form>
+              </section>
+
+              <section class="context-strip" aria-label="当前 Agent 摘要">
+                <article class="context-card agent-summary-card">
+                  <div class="context-card-heading"><span>Agent 身份</span><button id="context-settings-button" type="button">编辑</button></div>
+                  <strong id="agent-summary-name">—</strong>
+                  <p id="agent-summary-center">—</p>
+                  <div class="micro-meta"><span id="agent-summary-locale">—</span><span id="agent-summary-timezone">—</span><span id="agent-summary-mode">—</span></div>
+                </article>
+                <article class="context-card prompt-summary-card">
+                  <div class="context-card-heading"><span id="prompt-mode-title">提示词摘要</span><button id="context-prompt-button" type="button">查看</button></div>
+                  <p id="prompt-summary-text">正在读取当前提示词…</p>
+                </article>
+                <article class="context-card provider-card">
+                  <div class="context-card-heading"><span>模型连接</span></div>
+                  <strong id="provider-model">—</strong>
+                  <p id="provider-key-status">正在检查…</p>
+                </article>
+              </section>
+            </section>
+
+            <section class="workspace-view" data-workspace-panel="memory" hidden>
+              <div class="section-heading">
+                <div><p class="eyebrow">Persistent memory</p><h2>它记住的世界</h2><p>先看对象与关系，再点开证据、来源和不确定性。图谱始终只读。</p></div>
+                <button class="button ghost" id="refresh-memory" type="button">刷新图谱</button>
+              </div>
+              <div class="memory-summary" id="memory-summary"></div>
+              <section class="graph-card">
+                <div class="graph-stage">
+                  <div class="graph-status" aria-live="polite">
+                    <div class="graph-source">
+                      <span class="graph-source-dot" aria-hidden="true"></span>
+                      <span><strong>当前 Agent · 正式记忆</strong><small id="memory-graph-source">正在连接数据库…</small></span>
+                    </div>
+                    <div class="graph-view-stats" id="memory-graph-stats"></div>
+                  </div>
+                  <svg id="memory-graph" role="img" aria-label="当前 Agent 的持久化记忆图谱" viewBox="0 0 920 520" preserveAspectRatio="xMidYMid meet">
+                    <g id="memory-graph-edges"></g>
+                    <g id="memory-graph-nodes"></g>
+                  </svg>
+                  <div class="graph-stage-footer">
+                    <p class="graph-caption" id="memory-graph-caption">正在读取图谱…</p>
+                    <div class="graph-window-controls" id="memory-graph-window-controls" aria-label="图谱视窗轮转" hidden>
+                      <button type="button" id="memory-graph-previous" aria-label="显示上一组记忆">‹</button>
+                      <span><strong id="memory-graph-window-label">1 / 1</strong><small>记忆视窗</small></span>
+                      <button type="button" id="memory-graph-next" aria-label="显示下一组记忆">›</button>
+                      <button class="graph-auto-toggle active" type="button" id="memory-graph-auto" aria-pressed="true"><i aria-hidden="true"></i>自动</button>
+                    </div>
+                  </div>
+                </div>
+                <aside class="graph-detail" id="memory-graph-detail">
+                  <span class="graph-detail-orbit" aria-hidden="true">◎</span>
+                  <p class="eyebrow">How to read</p>
+                  <h3>圆点是对象，连线是关联</h3>
+                  <p>连接可以从任一端浏览。点击节点查看它与谁相连；文字属性保留在对象详情中。</p>
+                </aside>
+              </section>
+              <form class="memory-search-form" id="memory-search-form">
+                <label><span class="sr-only">搜索记忆</span><input type="search" name="query" placeholder="搜索记忆对象或问题" /></label>
+                <button class="button ghost" type="submit">搜索</button>
+              </form>
+              <div class="memory-lists">
+                <section><h3>记忆对象</h3><div id="memory-object-list"></div></section>
+                <section><h3>待追踪问题</h3><div id="memory-inquiry-list"></div></section>
+              </div>
+              <section class="pending-memory" id="pending-memory">
+                <div class="pending-memory-heading">
+                  <div><p class="eyebrow">Staged memory</p><h3>待发布记忆</h3></div>
+                  <p>只有意外滞留在暂存区的内容会出现在这里。确认后可用确定性流程发布到上方正式图谱，不会再次调用模型。</p>
+                </div>
+                <div class="pending-wakes-list" id="pending-wakes-list" role="status" aria-live="polite">正在检查待发布内容…</div>
+              </section>
+            </section>
+
+            <section class="workspace-view" data-workspace-panel="history" hidden>
+              <div class="section-heading">
+                <div><p class="eyebrow">Run history</p><h2>观察记录</h2><p>先看最终写入结果；Token 与成本均按本次运行累计，诊断明细按需展开。</p></div>
+                <button class="button ghost" id="refresh-runs" type="button">刷新记录</button>
+              </div>
+              <section class="monitor-panel" id="monitor-panel">
+                <div class="run-monitor" id="run-monitor"></div>
+              </section>
+            </section>
+          </div>
+
+          <section class="empty-profile" id="empty-profile" hidden>
+            <span class="empty-orbit" aria-hidden="true">✦</span>
+            <h2>先创建一个 Agent</h2>
+            <p>给它一个领域和观察重点，其余设置可以稍后再完善。</p>
+            <button class="button primary" id="empty-new-agent" type="button">创建 Agent</button>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+    <aside class="drawer" id="settings-drawer" aria-labelledby="settings-title" hidden>
+      <header class="drawer-header"><div><p class="eyebrow">Agent profile</p><h2 id="settings-title">创建 Agent</h2><p>日常只需要基本信息；专业设置按需展开。</p></div><button class="icon-button" type="button" data-close-drawer aria-label="关闭">×</button></header>
+      <form class="drawer-form" id="profile-form">
+        <section class="form-section">
+          <h3>观察身份</h3>
+          <p class="field-help">决定这个 Agent 是谁，以及长期关注什么。</p>
+          <label>名称<input name="display_name" required placeholder="例如：AI 产品观察员" /></label>
+          <label>主要关注什么<textarea name="observation_center" required rows="3" placeholder="例如：关注 AI 产品、交互方式和真实用户反馈"></textarea></label>
+          <div class="form-grid two">
+            <label>语言<select name="locale"><option value="zh-CN">简体中文</option><option value="en-US">English</option></select></label>
+            <label>时区<select name="timezone"><option value="Asia/Shanghai">Asia/Shanghai</option><option value="UTC">UTC</option><option value="America/Los_Angeles">America/Los_Angeles</option></select></label>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h3>默认信息来源</h3>
+          <p class="field-help">以后每次启动都可以临时调整。</p>
+          <input type="hidden" name="default_adapters" value="public-web" />
+          <div class="source-selector compact">
+            <label><input type="checkbox" value="public-web" data-role="profile-adapter" checked /><span>公开网络</span></label>
+            <label><input type="checkbox" value="bilibili" data-role="profile-adapter" /><span>哔哩哔哩</span></label>
+            <label><input type="checkbox" value="hupu" data-role="profile-adapter" /><span>虎扑</span></label>
+            <label><input type="checkbox" value="nga" data-role="profile-adapter" /><span>NGA</span></label>
+          </div>
+        </section>
+
+        <details class="expert-settings">
+          <summary><span>专业：领域定义与长期 Prompt</span><small id="expert-settings-hint">普通使用无需调整</small></summary>
+          <div class="expert-content">
+            <label>相关性规则<textarea name="relevance_rule" rows="3"></textarea></label>
+            <label>关注示例<textarea name="attention_examples" rows="3"></textarea></label>
+            <label>来源偏好<textarea name="source_preferences" rows="3"></textarea></label>
+            <label>分支策略<textarea name="branches" rows="3"></textarea></label>
+            <label>搜索经验<textarea name="search_experience" rows="3"></textarea></label>
+          </div>
+        </details>
+
+        <details class="expert-settings">
+          <summary><span>专业：运行边界与推理</span><small>上下文为主，轮次和成本仅作兜底</small></summary>
+          <div class="expert-content">
+            <div class="form-grid two">
+              <label>默认模式<select name="default_mode"><option value="broad">广泛探索</option><option value="deep">深入研究</option></select></label>
+              <label>默认轮次兜底<input type="number" name="default_max_turns" min="1" max="200" /></label>
+              <label>默认成本上限<input type="number" name="default_max_cost_usd" min="0.01" max="1000" step="0.01" placeholder="留空表示不限制" /></label>
+              <label>默认广泛视角<input name="default_broad_perspective" /></label>
+              <label>默认深入视角<input name="default_deep_perspective" /></label>
+              <label class="check-row"><input type="checkbox" name="default_thinking" />默认启用深度思考</label>
+              <label>默认推理强度<select name="default_reasoning_effort" disabled><option value="">由模型决定</option><option value="high">High</option><option value="max">Max</option></select></label>
+            </div>
+            <p class="field-help">服务端默认在约 70 万上下文 Token 时提醒、80 万时硬停止；成本上限默认关闭。深度思考会增加延迟与消耗，未勾选时推理强度不会生效。</p>
+          </div>
+        </details>
+
+        <details class="expert-settings">
+          <summary><span>专业：身份与独立存储</span><small>默认按 Agent 自动生成独立数据库路径</small></summary>
+          <div class="expert-content">
+            <div class="form-grid two">
+              <label>Agent ID<input name="id" pattern="[a-zA-Z0-9_-]+" /></label>
+              <label>领域键<input name="domain_key" /></label>
+            </div>
+            <label>世界记忆数据库<input name="world_db" placeholder="data/agents/example/world.db" /></label>
+            <label>运行数据库<input name="runtime_db" placeholder="data/agents/example/runtime.db" /></label>
+          </div>
+        </details>
+
+        <footer class="drawer-actions">
+          <button class="button ghost" id="clone-profile-button" type="button" hidden>复制为新 Agent</button>
+          <button class="button primary" type="submit">保存 Agent</button>
+        </footer>
+      </form>
+    </aside>
+
+    <aside class="drawer" id="connections-drawer" aria-labelledby="connections-title" hidden>
+      <header class="drawer-header"><div><p class="eyebrow">Local connections</p><h2 id="connections-title">连接与凭据</h2><p>凭据属于这台机器，不属于某个 Agent。</p></div><button class="icon-button" type="button" data-close-drawer aria-label="关闭">×</button></header>
+      <form class="drawer-form" id="local-settings-form">
+        <div class="security-note"><strong>安全边界</strong><p>这里只写入项目的本地 <code>.env</code>。密码与 Cookie 不会回显，也不会出现在 Agent 配置和数据库里。</p></div>
+        <section class="form-section connection-section">
+          <div class="connection-heading"><div><h3>DeepSeek</h3><p>Agent 推理与内容整理</p></div><span id="deepseek-connection-status">检查中</span></div>
+          <label>API Key<input type="password" name="deepseek_api_key" autocomplete="new-password" placeholder="输入新值才会覆盖" /></label>
+          <label>模型<input name="deepseek_model" placeholder="deepseek-chat" /></label>
+          <label>Base URL<input name="deepseek_base_url" placeholder="https://api.deepseek.com" /></label>
+        </section>
+        <section class="form-section connection-section">
+          <div class="connection-heading"><div><h3>哔哩哔哩</h3><p>访问个性化或登录后内容</p></div><span id="bilibili-connection-status">检查中</span></div>
+          <label>SESSDATA<input type="password" name="bilibili_sessdata" autocomplete="new-password" placeholder="输入新值才会覆盖" /></label>
+        </section>
+        <section class="form-section connection-section">
+          <div class="connection-heading"><div><h3>NGA</h3><p>访问需要登录的论坛内容</p></div><span id="nga-connection-status">检查中</span></div>
+          <label>Cookie<input type="password" name="nga_cookie" autocomplete="new-password" placeholder="输入新值才会覆盖" /></label>
+        </section>
+        <footer class="drawer-actions"><button class="button primary" type="submit">保存到本机</button></footer>
+      </form>
+    </aside>
+
+    <aside class="drawer wide" id="prompt-drawer" aria-labelledby="prompt-drawer-mode" hidden>
+      <header class="drawer-header"><div><p class="eyebrow">启动前检查</p><h2 id="prompt-drawer-mode">提示词预览</h2></div><button class="icon-button" type="button" data-close-drawer aria-label="关闭">×</button></header>
+      <div class="drawer-form">
+        <button class="button ghost align-self" id="reload-prompt" type="button">重新编译</button>
+        <section class="prompt-section"><h3>唤醒输入</h3><pre id="wake-input-preview"></pre><div class="micro-meta"><span id="wake-preview-mode">—</span><span id="wake-preview-seed">—</span><span id="wake-preview-budget">—</span><span id="wake-preview-adapters">—</span></div></section>
+        <section class="prompt-section"><h3>提示词层级</h3><div id="prompt-layers"></div></section>
+        <section class="prompt-section"><h3>编译结果</h3><pre id="compiled-prompt"></pre></section>
+        <section class="prompt-section"><h3>操作员长期引导</h3><textarea id="operator-instructions" rows="6" placeholder="可填写长期优先级、排除项与解释偏好"></textarea><button class="button primary" id="save-operator" type="button">保存长期引导</button></section>
+      </div>
+    </aside>
+
+    <aside class="drawer" id="memory-drawer" aria-labelledby="memory-detail-title" hidden>
+      <header class="drawer-header"><div><p class="eyebrow">记忆详情</p><h2 id="memory-detail-title">记忆对象</h2></div><button class="icon-button" type="button" data-close-drawer aria-label="关闭">×</button></header>
+      <div class="drawer-form"><div id="memory-detail-content"></div><button class="button primary" id="use-memory-object" type="button">围绕此对象深入研究</button></div>
+    </aside>
+
+    <script src="/static/app.js?v=20260824-5"></script>
+  </body>
+</html>

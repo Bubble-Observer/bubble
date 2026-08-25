@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="zh-CN" data-edition-endpoint="./data/edition.json" data-edition-catalog="./data/editions.json?v=edition-snapshot-1" data-upcoming-endpoint="./data/upcoming.json?v=edition-snapshot-1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bubble 每天整理值得关注的消息，并附上背景与来源。"
+    />
+    <meta name="theme-color" content="#f1efe9" />
+    <title>Bubble · 今日</title>
+    <link rel="stylesheet" href="./styles.css?v=ai-footer-1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">跳到主要内容</a>
+
+    <!-- 封面（进入感） -->
+    <section class="cover" id="cover" aria-label="今日封面">
+      <div class="cover__top">
+        <span class="cover__brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="cover__brand-name">Bubble</span>
+        </span>
+        <span class="cover__meta" id="cover-issue">2026年8月4日 · 今日更新</span>
+      </div>
+      <div class="cover__mid">
+        <h1 class="cover__headline" id="cover-headline">尘埃落定与悬而未决</h1>
+        <p class="cover__dek" id="cover-dek">今天的重要消息，以及理解它们所需的背景和来源。</p>
+        <div class="cover__pills" id="cover-pills">
+          <a class="cover-pill cover-pill--live" href="#/domain/lol" data-route>LOL · 今日已更新 ↗</a>
+          <span class="cover-pill">王者</span>
+          <span class="cover-pill">音乐</span>
+          <span class="cover-pill">金融</span>
+        </div>
+      </div>
+      <div class="cover__bottom">
+        <span class="cover__scroll-hint">向下阅读</span>
+        <span class="cover__scroll-line" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <div class="site-shell">
+      <header class="site-header" id="site-header">
+        <a class="brand" href="#/" data-route aria-label="返回 Bubble 首页">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">Bubble</span>
+        </a>
+        <nav class="tb-domains" id="tb-domains" aria-label="领域切换">
+          <a class="tb-domain active" href="#/domain/lol" data-route>LOL</a>
+          <span class="tb-domain tb-domain--planned" title="该领域尚未开放">王者</span>
+          <span class="tb-domain tb-domain--planned" title="该领域尚未开放">音乐</span>
+          <span class="tb-domain tb-domain--planned" title="该领域尚未开放">金融</span>
+        </nav>
+        <div class="edition-meta" aria-label="当前版本信息">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span id="header-domain">LOL</span>
+          <span class="meta-separator" aria-hidden="true"></span>
+          <time id="header-date">8月4日星期二</time>
+          <span class="meta-separator" aria-hidden="true"></span>
+          <span class="date-rail" aria-label="切换日期">
+            <button class="date-btn" type="button" data-dir="-1" aria-label="前一天">←</button>
+            <span class="date-now" id="date-now">8 月 4 日</span>
+            <button class="date-btn" type="button" data-dir="1" aria-label="后一天">→</button>
+          </span>
+          <button class="cal-btn" type="button" id="cal-open" aria-expanded="false" aria-controls="calendar-pop">☰ 日历</button>
+        </div>
+      </header>
+
+      <main id="content" tabindex="-1">
+        <div class="page-home">
+          <section class="home-scene home-scene--signal" id="toc-today" aria-labelledby="today-title">
+            <div class="scene-index"><span>01</span><span>今日概览</span></div>
+            <div class="scene-copy">
+              <span class="section-kicker">8月4日星期二</span>
+              <h1 class="visually-hidden" id="today-title">今日概览</h1>
+              <div class="daily-signal" aria-hidden="true">
+                <svg viewBox="0 0 480 280" focusable="false">
+                  <g class="daily-signal__grid">
+                    <path class="daily-signal__axis" d="M24 140H456" />
+                    <ellipse class="daily-signal__orbit daily-signal__orbit--outer" cx="240" cy="140" rx="196" ry="91" />
+                    <ellipse class="daily-signal__orbit daily-signal__orbit--inner" cx="240" cy="140" rx="126" ry="58" />
+                  </g>
+                  <g class="daily-signal__links">
+                    <path d="M240 140L173 54.5" />
+                    <path d="M240 140L424.2 108.9" />
+                    <path d="M240 140L307 225.5" />
+                    <path d="M240 140L55.8 171.1" />
+                  </g>
+                  <ellipse class="daily-signal__sweep" cx="240" cy="140" rx="196" ry="91" pathLength="1" />
+                  <g class="daily-signal__center">
+                    <circle class="daily-signal__center-ring" cx="240" cy="140" r="29" />
+                    <circle class="daily-signal__center-pulse" cx="240" cy="140" r="14" />
+                    <circle class="daily-signal__center-dot" cx="240" cy="140" r="5" />
+                  </g>
+                  <g class="daily-signal__node daily-signal__node--leading" transform="translate(173 54.5)"><circle class="daily-signal__node-ring" r="8" /><circle class="daily-signal__node-dot" r="2.75" /></g>
+                  <g class="daily-signal__node" transform="translate(424.2 108.9)"><circle class="daily-signal__node-ring" r="8" /><circle class="daily-signal__node-dot" r="2.75" /></g>
+                  <g class="daily-signal__node" transform="translate(307 225.5)"><circle class="daily-signal__node-ring" r="8" /><circle class="daily-signal__node-dot" r="2.75" /></g>
+                  <g class="daily-signal__node" transform="translate(55.8 171.1)"><circle class="daily-signal__node-ring" r="8" /><circle class="daily-signal__node-dot" r="2.75" /></g>
+                </svg>
+              </div>
+              <p>今天的重要消息，以及理解它们所需的背景和来源。</p>
+              <a class="scene-jump" href="#toc-lead">阅读头条 <b aria-hidden="true">↓</b></a>
+            </div>
+            <aside class="signal-list" aria-label="今日速览">
+              <span class="section-kicker">今日要点</span>
+              <ol>
+                <li><span>01</span><p>今晚 7 点，WBG 与 EDG 同时官宣：Jiejie 离开 WBG、回归 EDG。</p></li>
+                <li><span>02</span><p>距 8 月 10 日转会窗口关闭还有 6 天，BLG 上单位置人选仍是最大悬念。</p></li>
+                <li><span>03</span><p>BLG 官方账号昨夜 23 时 48 分的动态引发玩梗解读，「48」争议仍在升级。</p></li>
+                <li><span>04</span><p>DK 再次零封 GEN 后，「欠薪 BUFF」叙事彻底成型，许哥的故事正在升温。</p></li>
+              </ol>
+            </aside>
+          </section>
+
+          <section class="home-scene home-scene--lead" id="toc-lead" aria-label="今日头条">
+            <div class="scene-index"><span>02</span><span>头条</span></div>
+            <div class="lead-context">
+              <span class="section-kicker">英雄联盟 · 今日重点</span>
+              <p>官宣、悬念与数字梗，在同一天交叉。</p>
+              <a class="quiet-link" href="#/domain/lol" data-route>查看 英雄联盟 ↗</a>
+            </div>
+            <article class="story-card story-card--lead" data-story-id="jiejie-edg-return">
+              <a class="story-card__link" href="#/story/jiejie-edg-return" data-route>
+                <div class="story-card__topline">
+                  <span>头条 · 已确认</span>
+                  <span>5 分钟</span>
+                </div>
+                <h3>Jiejie 回到 EDG：今晚七点，两则官宣同时落地</h3>
+                <p>8 月 4 日晚 7 点，WBG 与 EDG 同时官宣：Jiejie 即日起离开 WBG、回归 EDG。这桩转会的种子早在几天前就已埋下——降薪不满、厂长运作、大名单更替，直到今晚以最富仪式感的方式收场。</p>
+                <div class="story-card__footer">
+                  <span>更新于 8 月 4 日晚</span>
+                  <span class="text-link">阅读全文 <b aria-hidden="true">↗</b></span>
+                </div>
+              </a>
+            </article>
+          </section>
+
+          <section class="home-scene home-scene--stories" id="toc-supporting" aria-labelledby="important-heading">
+            <div class="scene-index"><span>03</span><span>更多报道</span></div>
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">今日更新</span>
+                <h2 id="important-heading">其他值得关注的事</h2>
+              </div>
+              <span class="section-count">03</span>
+            </div>
+            <div class="story-grid">
+              <article class="story-card story-card--standard" data-story-id="blg-top-lane-window">
+                <a class="story-card__link" href="#/story/blg-top-lane-window" data-route>
+                  <div class="story-card__topline">
+                    <span>更多报道 · 持续更新</span>
+                    <span>5 分钟</span>
+                  </div>
+                  <h3>转会期最后一周：BLG 的上单，从「谁来顶替」变成「Bin 是否回归」</h3>
+                  <p>8 月 10 日转会窗口截止前，BLG 上单话题的焦点已经变了：圣枪哥签约未定、wenbo 连胜留任的呼声渐高，而「Bin 要回归」的爆料每天都在出现——俱乐部至今保持沉默。</p>
+                  <div class="story-card__footer">
+                    <span>更新于 8 月 4 日</span>
+                    <span class="text-link">阅读全文 <b aria-hidden="true">↗</b></span>
+                  </div>
+                </a>
+              </article>
+              <article class="story-card story-card--standard" data-story-id="48bin-revival">
+                <a class="story-card__link" href="#/story/48bin-revival" data-route>
+                  <div class="story-card__topline">
+                    <span>更多报道 · 持续更新</span>
+                    <span>5 分钟</span>
+                  </div>
+                  <h3>「48」这个数字，正在成为围绕 Bin 的公共议题</h3>
+                  <p>昨夜 23 时 48 分，BLG 官方账号的一条动态把「48」推上风口浪尖——一个 2026 年夏天复兴的社区梗，因为官方的时间点选择，升级成了公共争议。</p>
+                  <div class="story-card__footer">
+                    <span>更新于 8 月 4 日</span>
+                    <span class="text-link">阅读全文 <b aria-hidden="true">↗</b></span>
+                  </div>
+                </a>
+              </article>
+              <article class="story-card story-card--standard" data-story-id="showmaker-dk">
+                <a class="story-card__link" href="#/story/showmaker-dk" data-route>
+                  <div class="story-card__topline">
+                    <span>更多报道 · 人物</span>
+                    <span>4 分钟</span>
+                  </div>
+                  <h3>「欠薪 BUFF」：DK 零封 GEN 之后，一段关于许哥的叙事正在升温</h3>
+                  <p>8 月 1 日 DK 再次零封 GEN，社区把这场胜利与一个月前的 EWC 夺冠连成一条完整的叙事线：欠薪、低谷、2087 天——「欠薪 BUFF」的说法就此成型，并在 8 月 3 日被推向新高度。</p>
+                  <div class="story-card__footer">
+                    <span>更新于 8 月 4 日</span>
+                    <span class="text-link">阅读全文 <b aria-hidden="true">↗</b></span>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <section class="home-scene home-scene--pulse" id="toc-lower" aria-label="简讯与日程">
+            <div class="scene-index"><span>04</span><span>简讯与日程</span></div>
+            <div class="home-lower-grid">
+              <section class="brief-stream" aria-labelledby="brief-heading">
+                <div class="section-heading section-heading--compact">
+                  <div>
+                    <span class="section-kicker">更多消息</span>
+                    <h2 id="brief-heading">短讯</h2>
+                  </div>
+                </div>
+                <ul class="brief-grid" aria-label="短讯列表">
+                  <li class="brief-card is-expandable" data-brief-open="0" role="button" tabindex="0" aria-expanded="false">
+                    <div class="brief-card__top"><time>今天上午</time><span class="status status--developing">持续更新</span></div>
+                    <p class="brief-card__title">微博爆料 BLG 大概率不签圣枪哥，wenbo 连胜成理由</p>
+                    <p class="brief-card__preview">多位微博爆料人一致表示 BLG 已基本放弃签下圣枪哥，wenbo 在训练赛的连胜表现成为主要理由，俱乐部尚未回应。</p>
+                    <span class="brief-card__expand" aria-hidden="true">展开 <b>↗</b></span>
+                  </li>
+                  <li class="brief-card is-expandable" data-brief-open="1" role="button" tabindex="0" aria-expanded="false">
+                    <div class="brief-card__top"><time>昨夜 23:48</time><span class="status status--community">社区讨论</span></div>
+                    <p class="brief-card__title">BLG 官方账号发布动态，时间点引发玩梗解读</p>
+                    <p class="brief-card__preview">BLG 官方账号在 23:48 发布动态，这个时间点被社区解读为有意呼应「48」梗，相关争议仍在升级。</p>
+                    <span class="brief-card__expand" aria-hidden="true">展开 <b>↗</b></span>
+                  </li>
+                  <li class="brief-card">
+                    <div class="brief-card__top"><time>8 月 3 日</time><span class="status status--confirmed">已确认</span></div>
+                    <p class="brief-card__title">IG 两场比赛 B 站播放量突破 400 万，社区称热度断层第一</p>
+                  </li>
+                  <li class="brief-card">
+                    <div class="brief-card__top"><time>8 月 1 日</time><span class="status status--community">社区讨论</span></div>
+                    <p class="brief-card__title">T1 男团出道，社区调侃「电竞终点是男团」</p>
+                  </li>
+                  <li class="brief-card">
+                    <div class="brief-card__top"><time>7 月底</time><span class="status status--community">社区讨论</span></div>
+                    <p class="brief-card__title">英雄联盟怀旧经典模式上线即遭质疑：排不到人、英雄池受限，且上线首日匹配队列长时间等待，玩家纷纷在社区吐槽体验不佳</p>
+                  </li>
+                  <li class="brief-card">
+                    <div class="brief-card__top"><time>近期</time><span class="status status--community">社区讨论</span></div>
+                    <p class="brief-card__title">S16 决赛门票争议：票价离谱、半决赛仅 6000 座位</p>
+                  </li>
+                </ul>
+              </section>
+
+              <section class="upcoming" aria-labelledby="upcoming-heading">
+                <div class="section-heading section-heading--compact">
+                  <div>
+                    <span class="section-kicker">未来一周</span>
+                    <h2 id="upcoming-heading">日程</h2>
+                  </div>
+                </div>
+                <ul>
+                  <li class="upcoming-item">
+                    <div class="upcoming-time"><strong>8 月 10 日</strong><span>截止</span></div>
+                    <div class="upcoming-copy"><h3>第三赛段转会窗口关闭</h3><p>BLG 上单人选将最终确定。</p></div>
+                    <span class="status">已公布</span>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </section>
+
+          <section class="home-scene home-scene--atlas" id="toc-atlas" aria-labelledby="atlas-heading">
+            <div class="scene-index"><span>05</span><span>浏览领域</span></div>
+            <div class="section-heading">
+              <div>
+                <span class="section-kicker">全部领域</span>
+                <h2 id="atlas-heading">按领域查看</h2>
+              </div>
+              <p>查看各领域今天更新的内容。</p>
+            </div>
+            <div class="domain-nodes">
+              <a class="domain-node domain-node--live" href="#/domain/games" data-route>
+                <span class="domain-node__index">01</span>
+                <div>
+                  <span class="domain-node__label">今日已更新</span>
+                  <strong>游戏</strong>
+                </div>
+                <span class="domain-node__state">1 个子领域 ↗</span>
+              </a>
+            </div>
+            <p class="atlas-note">这里只显示已有内容的领域。</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__disclosure">
+          <span class="site-footer__label">AI 生成说明</span>
+          <p>本刊由 AI 基于公开资料与项目收录信息生成，来源链接供核验。</p>
+        </div>
+        <div class="site-footer__meta">
+          <p>每日更新 · 来源可查</p>
+          <p class="visit-count" aria-label="网站访问统计" aria-live="polite">
+            <span id="busuanzi_value_site_pv">—</span> 次访问 ·
+            <span id="busuanzi_value_site_uv">—</span> 位访客
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- 右侧目录（scrollspy） -->
+    <nav class="toc" id="toc" aria-label="本页目录"></nav>
+
+    <!-- 日历弹出层（右上角，内容可滚动） -->
+    <div class="calendar-scrim" id="calendar-scrim" hidden></div>
+    <div class="calendar-pop" id="calendar-pop" role="dialog" aria-modal="true" aria-label="日历">
+      <div class="calendar-pop__topline">
+        <div class="calendar-pop__head" id="cal-month">2026 年 8 月</div>
+        <button class="calendar-close" type="button" id="cal-close" aria-label="关闭日历">×</button>
+      </div>
+      <div class="calendar-pop__scroll">
+        <div class="calendar-pop__grid" id="cal-grid"></div>
+        <div class="calendar-pop__legend">
+          <span><i class="dot-today"></i>今天</span>
+          <span><i class="dot-marked"></i>已有内容</span>
+        </div>
+        <div class="calendar-pop__upcoming">
+          <span class="section-kicker">未来一周</span>
+          <div id="cal-upcoming"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 轻提示 -->
+    <div class="toast" id="toast" role="status"></div>
+
+    <dialog class="culture-dialog" id="culture-dialog" aria-labelledby="culture-title">
+      <button class="dialog-close" type="button" aria-label="关闭文化注释">×</button>
+      <div id="culture-dialog-content"></div>
+    </dialog>
+
+    <dialog class="culture-dialog evidence-dialog" id="evidence-dialog" aria-labelledby="evidence-title">
+      <button class="dialog-close" type="button" aria-label="关闭证据说明">×</button>
+      <div id="evidence-dialog-content"></div>
+    </dialog>
+
+    <dialog class="culture-dialog evidence-dialog analysis-dialog" id="analysis-dialog" aria-labelledby="analysis-title">
+      <button class="dialog-close" type="button" aria-label="关闭分析说明">×</button>
+      <div id="analysis-dialog-content"></div>
+    </dialog>
+
+    <dialog class="culture-dialog evidence-dialog" id="brief-dialog" aria-labelledby="brief-dialog-title">
+      <button class="dialog-close" type="button" aria-label="关闭短讯详情">×</button>
+      <div id="brief-dialog-content"></div>
+    </dialog>
+
+    <script type="module" src="./app.js?v=daily-signal-3"></script>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  </body>
+</html>

@@ -1,0 +1,163 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leave-information-bubble"
+version = "0.1.0"
+description = "A persistent domain observer with traceable world memory and Graph Shell tooling."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.0",
+    "openai>=1.0",
+    "httpx>=0.28",
+    "jsonschema>=4.18",
+    "pydantic-settings>=2.0",
+    "langgraph>=1.0",
+    "langgraph-checkpoint-sqlite>=2.0",
+    "pypdf>=5.0",
+    "trafilatura==2.2.0",
+    "starlette>=1.0,<2",
+    "uvicorn>=0.38,<1",
+    "aiosqlite>=0.20",
+    "tzdata>=2025.2; sys_platform == 'win32'",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.11.0",
+    "mypy>=1.15",
+    "pytest>=8.3",
+    "pytest-asyncio>=0.25",
+    "pytest-cov>=6.0",
+    "pytest-mock>=3.14",
+    "langgraph-checkpoint>=2.0",
+]
+
+media = [
+    "faster-whisper>=1.1,<2",
+]
+
+[project.scripts]
+bubble-world = "leave_information_bubble.world_agent.cli:main"
+bubble-console = "leave_information_bubble.console.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+leave_information_bubble = [
+    "py.typed",
+    "console/static/*.html",
+    "console/static/*.css",
+    "console/static/*.js",
+]
+
+# ============================================================================
+# Ruff — fast Python linter & formatter
+# ============================================================================
+[tool.ruff]
+target-version = "py311"
+line-length = 110
+
+[tool.ruff.lint]
+select = [
+    # pyflakes
+    "F",
+    # pycodestyle
+    "E",
+    "W",
+    # isort
+    "I",
+    # flake8-bugbear
+    "B",
+    # flake8-comprehensions
+    "C4",
+    # flake8-simplify
+    "SIM",
+    # flake8-return
+    "RET",
+    # flake8-builtins
+    "A",
+    # flake8-print
+    "T20",
+    # pyupgrade
+    "UP",
+    # flake8-datetimez
+    "DTZ",
+    # flake8-annotations
+    "ANN",
+    # pydocstyle (basic)
+    "D",
+    # eradicate (commented-out code)
+    "ERA",
+    # flake8-tidy-imports
+    "TID",
+]
+ignore = [
+    # Allow missing docstrings on non-public modules (D100-D104 handled case by case)
+    "D100", "D104", "D105", "D107",
+    # Use Ruff formatter-compatible docstring conventions.
+    "D203", "D213",
+    # Allow short variable names like 'x', 'y', 'id'
+    "F841",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["D", "ANN", "S101"]
+"src/leave_information_bubble/__init__.py" = ["D"]
+"src/leave_information_bubble/gateway/client.py" = ["ANN401"]
+"src/leave_information_bubble/gateway/deepseek_client.py" = ["ANN401"]
+"scripts/graph_shell_golden_scenarios.py" = ["T201"]
+"scripts/render_world_graph.py" = ["T201"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+# ============================================================================
+# MyPy — static type checker
+# ============================================================================
+[tool.mypy]
+python_version = "3.11"
+strict = true
+# Disable specific strict checks that are too noisy for this project stage
+disallow_untyped_calls = false
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+
+# ============================================================================
+# Pytest — test framework
+# ============================================================================
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+addopts = [
+    "-v",
+    "--strict-markers",
+    "--tb=short",
+    "--basetemp=.pytest_tmp",
+]
+
+[tool.coverage.run]
+source = ["src/leave_information_bubble"]
+omit = ["tests/*"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "def __repr__",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]

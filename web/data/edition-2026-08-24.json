@@ -1,0 +1,641 @@
+{
+  "schemaVersion": "1.1",
+  "editionId": "edition-2026-08-24-daily",
+  "publishedAt": "2026-08-25T02:52:51+08:00",
+  "coverageWindow": {
+    "from": "2026-08-18T02:52:51+08:00",
+    "to": "2026-08-25T02:52:51+08:00"
+  },
+  "headline": "BLG替Flandre赢下旧主，Caps名人堂套装也正式亮价",
+  "dek": "LPL常规赛在一场带着旧账的2比1里收官，LCK紧接着进入季后赛；另一边，Caps名人堂活动公布了完整皮肤和价格。",
+  "todayNotes": [
+    "BLG 2比1击败AL，以登峰组第一结束第三赛段常规赛；队内语音里，Knight直接说要“帮枪哥赢”。",
+    "Caps名人堂活动将于9月10日开启，最高档签名套装定价58,865 RP。",
+    "HLE零封T1并锁定LCK常规赛第二，KT与BRO将在8月26日先打季后赛入围赛。",
+    "LPL骑士之路8月28日开打：EDG对NIP，TT对iG。"
+  ],
+  "domains": [
+    {
+      "id": "games",
+      "name": "游戏",
+      "kind": "group",
+      "status": "live",
+      "children": [
+        {
+          "id": "lol",
+          "name": "英雄联盟",
+          "shortName": "LOL",
+          "status": "live",
+          "accent": "#b86f42",
+          "summary": "LPL常规赛在一场带着旧账的2比1里收官，LCK紧接着进入季后赛；另一边，Caps名人堂活动公布了完整皮肤和价格。",
+          "storyIds": [
+            "blg-flandre-beats-al-finale",
+            "caps-hall-of-legends-full-reveal",
+            "lck-postseason-bracket-after-hle-t1"
+          ],
+          "briefs": [
+            {
+              "time": "8月24日",
+              "title": "AG.AL拿下EWC俱乐部总冠军，夺冠海报随后补回Flandre",
+              "status": "confirmed",
+              "detail": "AG.AL以5,300分获得2026 EWC俱乐部总冠军和700万美元奖金，成为首支拿到该总冠军的中国俱乐部；AL英雄联盟分部贡献200分。虎扑一则图帖记录，俱乐部随后修改夺冠海报，删去重复出现的Shanks并补入Flandre。",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "中国ag.al夺得2026ewc电竞世俱杯俱乐部总冠军",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：AG.AL拿下EWC俱乐部总冠军，夺冠海报随后补回Flandre",
+                  "url": "https://www.sohu.com/a/1066393411_114760",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "公开网页",
+                  "title": "登顶世界之巅!Ag.al斩获2026 Ewc电竞世俱杯俱乐部总 ...",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：AG.AL拿下EWC俱乐部总冠军，夺冠海报随后补回Flandre",
+                  "url": "https://www.aulacn.com/article/44.html",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "虎扑社区",
+                  "title": "ag微博发布ewc夺冠海报，已删除第二个香克斯，并且补上了圣枪哥的照片",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：AG.AL拿下EWC俱乐部总冠军，夺冠海报随后补回Flandre",
+                  "url": "https://bbs.hupu.com/642056300.html",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "time": "8月24日",
+              "title": "Homme谈执教环境：HLE有更多能干的教练，自己轻松不少",
+              "status": "confirmed",
+              "detail": "HLE监督Homme在战胜T1后的采访中说，队内有能力的教练比自己在LPL时更多，因此得到了很多帮助。他在今年5月的另一轮采访里也提过，过去在LPL时许多事务需要自己一人包揽。",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "Homme：来到HLE有能力的教练比LPL更多；选手们讨厌失利",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：Homme谈执教环境：HLE有更多能干的教练，自己轻松不少",
+                  "url": "https://news.zhibo8.com/game/2026-08-23/6a8aceac0f1d9native.htm",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "公开网页",
+                  "title": "在lpl真劳累!红米教练采访直言：在lpl啥活都干，回lck ...",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：Homme谈执教环境：HLE有更多能干的教练，自己轻松不少",
+                  "url": "https://news.qq.com/rain/a/20260516A07IPO00",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "time": "8月24日",
+              "title": "Inspired评价两位老对手：Tarzan最会带动全队，Caps已非世界前三",
+              "status": "confirmed",
+              "detail": "Inspired在外媒访谈中说，Tarzan可能是自己交手过的最强打野，重点在游戏理解和掌控全队节奏；谈到Caps时，他认为Caps依然稳定，但已经不是世界前三中单，也未必值得为了与其组队放弃其他条件。这些都是Inspired的个人评价。",
+              "sources": [
+                {
+                  "publisher": "虎扑社区",
+                  "title": "[情报站]Inspired：操作不是顶级，但Tarzan可能是我遇到的最强打野",
+                  "published": "8 月 25 日 00:27",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：Inspired评价两位老对手：Tarzan最会带动全队，Caps已非世界前三",
+                  "url": "https://bbs.hupu.com/642058605.html",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "虎扑社区",
+                  "title": "[情报站]Inspired：Caps不是世界前三中单，我加Caps效果不一定好",
+                  "published": "8 月 25 日 01:08",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：Inspired评价两位老对手：Tarzan最会带动全队，Caps已非世界前三",
+                  "url": "https://bbs.hupu.com/642065456.html",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "time": "8月24日",
+              "title": "Uzi说等直播流量不行了，再复盘2018年RNG对G2",
+              "status": "confirmed",
+              "detail": "虎扑8月24日一则直播帖记录，Uzi说“等未来有天流量不行了，我就复盘RNG对阵G2”。这里指的是RNG在2018全球总决赛八强以2比3不敌G2的系列赛。",
+              "sources": [
+                {
+                  "publisher": "虎扑社区",
+                  "title": "【直播】Uzi：等未来有天流量不行了，我就复盘RNG对阵G2",
+                  "published": "8 月 25 日 01:09",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：Uzi说等直播流量不行了，再复盘2018年RNG对G2",
+                  "url": "https://bbs.hupu.com/642058805.html",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "time": "常规赛收官",
+              "title": "LPL登峰组前二是BLG和AL，WBG与LNG结束第三赛段",
+              "status": "confirmed",
+              "detail": "登峰组最终前二为BLG、AL，两队直接进入季后赛后段；TES、JDG、WE、LGD也已晋级季后赛。TT、EDG将与涅槃组前二NIP、iG参加8月28日的骑士之路，WBG和LNG未能继续晋级。",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "LPL第三赛段常规赛收官：BLG居榜首，WBG、LNG提前出局",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：LPL登峰组前二是BLG和AL，WBG与LNG结束第三赛段",
+                  "url": "https://news.qq.com/rain/a/20260824A06ETG00",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "公开网页",
+                  "title": "LPL第三赛段骑士之路对阵出炉：iG vs TT、NIP vs EDG",
+                  "published": "",
+                  "type": "短讯证据",
+                  "supports": "支持短讯：LPL登峰组前二是BLG和AL，WBG与LNG结束第三赛段",
+                  "url": "https://news.zhibo8.com/game/2026-08-22/6a898933a7d70native.htm",
+                  "eventTime": null
+                }
+              ]
+            }
+          ],
+          "upcoming": [
+            {
+              "dateLabel": "8月25日",
+              "time": "19:00",
+              "title": "咕咕电竞杯直播开始",
+              "note": "8月24日Doinb直播回放标题预告，次日19:00直播LOL比赛“咕咕电竞杯”。",
+              "status": "scheduled",
+              "sources": [
+                {
+                  "publisher": "B站社区视频",
+                  "title": "【纯净】【Doinb】直播回放08月24日:明天7点直播 lol比赛 咕咕电竞杯",
+                  "published": "8 月 24 日 19:53",
+                  "type": "日程证据",
+                  "supports": "支持日程：咕咕电竞杯直播开始",
+                  "url": "https://www.bilibili.com/video/BV1ULhP6qEge",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "dateLabel": "8月26日",
+              "time": "16:00",
+              "title": "LCK入围赛：KT对BRO",
+              "note": "BO5，胜者直接晋级季后赛。",
+              "status": "scheduled",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "LCK官推更新入围赛赛程：26日16点KT打BRO，27日NS打BFX",
+                  "published": "",
+                  "type": "日程证据",
+                  "supports": "支持日程：LCK入围赛：KT对BRO",
+                  "url": "https://news.zhibo8.com/game/2026-08-24/6a8c0dfd53a16native.htm",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "dateLabel": "8月27日",
+              "time": "16:00",
+              "title": "LCK入围赛：NS对BFX",
+              "note": "BO5，败者赛季结束；胜者将在次日继续争夺最后一个席位。",
+              "status": "scheduled",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "LCK官推更新入围赛赛程：26日16点KT打BRO，27日NS打BFX",
+                  "published": "",
+                  "type": "日程证据",
+                  "supports": "支持日程：LCK入围赛：NS对BFX",
+                  "url": "https://news.zhibo8.com/game/2026-08-24/6a8c0dfd53a16native.htm",
+                  "eventTime": null
+                }
+              ]
+            },
+            {
+              "dateLabel": "8月28日",
+              "time": "14:00",
+              "title": "LPL骑士之路：EDG对NIP",
+              "note": "BO5，胜者晋级季后赛。",
+              "status": "scheduled",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "LPL第三赛段骑士之路对阵出炉：iG vs TT、NIP vs EDG",
+                  "published": "",
+                  "type": "日程证据",
+                  "supports": "支持日程：LPL骑士之路：EDG对NIP",
+                  "url": "https://news.zhibo8.com/game/2026-08-22/6a898933a7d70native.htm",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "LoL Esports",
+                  "title": "LoL Esports | LPL Schedule",
+                  "published": "",
+                  "type": "官方赛程页",
+                  "supports": "8月28日骑士之路开赛时间",
+                  "url": "https://lolesports.com/en-GB/leagues/lpl",
+                  "eventTime": "2026-08-28T14:00:00+08:00"
+                }
+              ]
+            },
+            {
+              "dateLabel": "8月28日",
+              "time": "17:00",
+              "title": "LPL骑士之路：TT对iG",
+              "note": "BO5，胜者晋级季后赛。",
+              "status": "scheduled",
+              "sources": [
+                {
+                  "publisher": "公开网页",
+                  "title": "LPL第三赛段骑士之路对阵出炉：iG vs TT、NIP vs EDG",
+                  "published": "",
+                  "type": "日程证据",
+                  "supports": "支持日程：LPL骑士之路：TT对iG",
+                  "url": "https://news.zhibo8.com/game/2026-08-22/6a898933a7d70native.htm",
+                  "eventTime": null
+                },
+                {
+                  "publisher": "LoL Esports",
+                  "title": "LoL Esports | LPL Schedule",
+                  "published": "",
+                  "type": "官方赛程页",
+                  "supports": "8月28日骑士之路第二场开赛时间",
+                  "url": "https://lolesports.com/en-GB/leagues/lpl",
+                  "eventTime": "2026-08-28T17:00:00+08:00"
+                }
+              ]
+            },
+            {
+              "dateLabel": "9月10日",
+              "time": "",
+              "title": "Caps名人堂游戏内活动开启",
+              "note": "100级通行证与崔丝塔娜三档套装同步开放。",
+              "status": "scheduled",
+              "sources": [
+                {
+                  "publisher": "Riot Games",
+                  "title": "Hall of Legends 2026 - Caps | League of Legends Hall of Fame",
+                  "published": "8 月 24 日 23:00",
+                  "type": "官方活动页",
+                  "supports": "Caps名人堂活动开始日期",
+                  "url": "https://halloflegends.leagueoflegends.com/en-us/",
+                  "eventTime": "2026-09-10"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "id": "blg-flandre-beats-al-finale",
+      "domainId": "lol",
+      "level": "core",
+      "status": "confirmed",
+      "eyebrow": "头条",
+      "title": "BLG替Flandre赢下旧主，队内语音把这场的分量说透了",
+      "summary": "BLG在第三赛段常规赛收官战2比1击败AL，最终排名登峰组第一。Flandre面对老东家首发取胜，赛后语音里Knight说“帮枪哥赢”，Flandre则向队友道谢。",
+      "whyItMatters": "BLG带着常规赛第一进入季后赛，上单位仍有Bin、Wenbo和Flandre三种选择；这场胜利至少让Flandre在关键轮换里交出了一场直接结果。",
+      "readTime": "4 分钟",
+      "updatedLabel": "更新于 8 月 25 日 02:52",
+      "eventTime": "2026-08-23",
+      "facts": [
+        "8月23日，BLG在LPL第三赛段常规赛收官战2比1击败AL。常规赛结束后，BLG位列登峰组第一，AL第二。",
+        "LPL发布的赛后队内语音中，Knight说“我们也一定要赢啊，帮枪哥赢”，Flandre在赛后向队友说“谢谢你们”。另一段BLG赛事语音里，队员还提到“感觉对面下了死命令一定要赢啊”。",
+        "Flandre赛后表示，希望BLG所有人在季后赛都发挥好，走到最后赢下比赛。",
+        "Flandre此前效力于AL；AL在7月引入Breathe后，他离开队伍，并于8月9日加盟BLG。BLG由此形成Bin、Wenbo、Flandre三名上单轮换的阵容。",
+        "Bin在8月20日回到BLG首发名单，三天后的收官战则由Flandre首发。"
+      ],
+      "factSourceIndexes": [
+        [
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          0
+        ]
+      ],
+      "analysis": [
+        {
+          "label": "季后赛前的选择",
+          "text": "BLG没有在常规赛结束前固定唯一上单：8月20日对LGD由Bin首发，收官战对AL又换成Flandre。季后赛采用BO5，轮换空间仍在，但每次选择都会被拿来和上一场结果比较。"
+        }
+      ],
+      "timeline": [
+        {
+          "time": "7月",
+          "text": "AL引入Breathe，Flandre离队。"
+        },
+        {
+          "time": "8月9日",
+          "text": "BLG官宣Flandre加盟。"
+        },
+        {
+          "time": "8月23日",
+          "text": "Flandre首发，BLG 2比1击败AL。"
+        }
+      ],
+      "cultureNotes": [],
+      "sources": [
+        {
+          "publisher": "公开网页",
+          "title": "LPL第三赛段常规赛收官：BLG居榜首，WBG、LNG提前出局",
+          "published": "",
+          "type": "观察记录",
+          "supports": "8月23日，BLG在LPL第三赛段常规赛收官战2比1击败AL。常规赛结束后，BLG位列登峰组第一，AL第二。",
+          "url": "https://news.qq.com/rain/a/20260824A06ETG00",
+          "eventTime": null
+        },
+        {
+          "publisher": "虎扑社区",
+          "title": "[流言板]BLG对战AL队内语音-Knight：帮枪哥赢！",
+          "published": "",
+          "type": "观察记录",
+          "supports": "LPL发布的赛后队内语音中，Knight说“我们也一定要赢啊，帮枪哥赢”，Flandre在赛后向队友说“谢谢你们”。另一段BLG赛事语音里，队员还提到“感觉对面下了死命令一定要赢啊”。",
+          "url": "https://bbs.hupu.com/642047752.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "虎扑社区",
+          "title": "[流言板]BLG分享对阵AL赛事语音：感觉对面下了死命令一定要赢啊",
+          "published": "8 月 25 日 00:54",
+          "type": "观察记录",
+          "supports": "LPL发布的赛后队内语音中，Knight说“我们也一定要赢啊，帮枪哥赢”，Flandre在赛后向队友说“谢谢你们”。另一段BLG赛事语音里，队员还提到“感觉对面下了死命令一定要赢啊”。",
+          "url": "https://bbs.hupu.com/642065871.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "虎扑社区",
+          "title": "[流言板]Flandre：希望BLG所有人季后赛都发挥好，走到最后赢下比赛",
+          "published": "8 月 25 日 00:09",
+          "type": "观察记录",
+          "supports": "Flandre赛后表示，希望BLG所有人在季后赛都发挥好，走到最后赢下比赛。",
+          "url": "https://bbs.hupu.com/642053688.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "公开网页",
+          "title": "重磅官宣!圣枪哥正式加盟BLG，三上单阵容成型携手Viper ...",
+          "published": "",
+          "type": "观察记录",
+          "supports": "Flandre此前效力于AL；AL在7月引入Breathe后，他离开队伍，并于8月9日加盟BLG。BLG由此形成Bin、Wenbo、Flandre三名上单轮换的阵容。",
+          "url": "https://news.qq.com/rain/a/20260809A06PPK00",
+          "eventTime": null
+        },
+        {
+          "publisher": "公开网页",
+          "title": "圣枪哥来了!官方：原AL战队上单Flandre正式加入BLG",
+          "published": "",
+          "type": "观察记录",
+          "supports": "Flandre此前效力于AL；AL在7月引入Breathe后，他离开队伍，并于8月9日加盟BLG。BLG由此形成Bin、Wenbo、Flandre三名上单轮换的阵容。",
+          "url": "https://zhuanlan.zhihu.com/p/2069793269631001196",
+          "eventTime": null
+        },
+        {
+          "publisher": "公开网页",
+          "title": "如何看待Bin选手2026年8月20号重回首发名单，以及Flandre ...",
+          "published": "",
+          "type": "观察记录",
+          "supports": "Bin在8月20日回到BLG首发名单，三天后的收官战则由Flandre首发。",
+          "url": "https://www.zhihu.com/question/2073552512142124432",
+          "eventTime": null
+        }
+      ]
+    },
+    {
+      "id": "caps-hall-of-legends-full-reveal",
+      "domainId": "lol",
+      "level": "core",
+      "status": "confirmed",
+      "eyebrow": "名人堂",
+      "title": "Caps名人堂活动完整公布：发条进通行证，小炮最高档58,865 RP",
+      "summary": "Riot在北京时间8月24日晚放出Caps名人堂活动全量页面。活动以奥莉安娜和崔丝塔娜为核心，100级通行证售价1,950 RP，三档崔丝塔娜套装从5,035 RP一路到58,865 RP。",
+      "whyItMatters": "玩家现在可以按完整内容和价格决定是否购买；活动9月10日开始，最高档套装还包含直接解锁100级通行证。",
+      "readTime": "4 分钟",
+      "updatedLabel": "更新于 8 月 25 日 02:52",
+      "eventTime": "2026-08-24T23:00:00+08:00",
+      "facts": [
+        "Riot于8月24日15:00 UTC发布Caps名人堂活动页面。活动从9月10日11:00（太平洋时间）持续至10月20日23:59（太平洋时间）。",
+        "100级名人堂通行证售价1,950 RP，主要奖励包括“联盟不朽”奥莉安娜皮肤及边框、活动炫彩、125神话精萃、11个法球，以及以Caps为主题的图标和表情。",
+        "崔丝塔娜套装分为三档：基础档5,035 RP；带三种“机械天才”形态、终结特效等内容的不朽档32,035 RP；签名档58,865 RP。签名档包含Caps的Ctrl+5动作、签名原画与边框、专属称号，并直接解锁通行证100级。",
+        "Caps是英雄联盟名人堂第三位成员，也是首位入选的西方职业选手；前两位成员是Faker和Uzi。",
+        "皮肤原画公布后，虎扑和B站相关帖子下出现了对英雄选择、配色和选手辨识度的质疑；有人认为奥莉安娜与崔丝塔娜不如亚索、阿卡丽或塞拉斯能让人立刻想到Caps。"
+      ],
+      "factSourceIndexes": [
+        [
+          0
+        ],
+        [
+          1
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "analysis": [
+        {
+          "label": "购买信息已经齐了",
+          "text": "页面列出了从1,950 RP通行证到58,865 RP签名套装的完整梯度。玩家现在可以把英雄选择、成品观感和价格放在一起判断。"
+        }
+      ],
+      "timeline": [
+        {
+          "time": "8月16日",
+          "text": "Riot宣布Caps成为名人堂第三位成员。"
+        },
+        {
+          "time": "8月24日",
+          "text": "活动页、皮肤和三档套装价格完整公开。"
+        },
+        {
+          "time": "9月10日",
+          "text": "Caps名人堂游戏内活动开启。"
+        }
+      ],
+      "cultureNotes": [],
+      "sources": [
+        {
+          "publisher": "Riot Games",
+          "title": "Hall of Legends 2026 - Caps | League of Legends Hall of Fame",
+          "published": "8 月 24 日 23:00",
+          "type": "官方活动页",
+          "supports": "Caps名人堂活动的开始与结束时间",
+          "url": "https://halloflegends.leagueoflegends.com/en-us/",
+          "eventTime": "2026-09-10"
+        },
+        {
+          "publisher": "Riot Games",
+          "title": "Hall of Legends 2026 - Caps | Salón de la fama de League of Legends",
+          "published": "8 月 24 日 23:00",
+          "type": "官方活动页",
+          "supports": "通行证价格、等级和主要奖励",
+          "url": "https://halloflegends.leagueoflegends.com/es-es/",
+          "eventTime": "2026-09-10"
+        },
+        {
+          "publisher": "B站社区视频",
+          "title": "赛事官方：欢迎Caps成为英雄联盟名人堂第三位成员",
+          "published": "",
+          "type": "观察记录",
+          "supports": "Caps是英雄联盟名人堂第三位成员，也是首位入选的西方职业选手；前两位成员是Faker和Uzi。",
+          "url": "https://www.bilibili.com/video/BV1ejbo6fEdM/",
+          "eventTime": null
+        },
+        {
+          "publisher": "虎扑社区",
+          "title": "[流言板]2026名人堂Caps主题皮肤原画预览：发条、小炮获皮肤",
+          "published": "8 月 25 日 01:08",
+          "type": "观察记录",
+          "supports": "皮肤原画公布后，虎扑和B站相关帖子下出现了对英雄选择、配色和选手辨识度的质疑；有人认为奥莉安娜与崔丝塔娜不如亚索、阿卡丽或塞拉斯能让人立刻想到Caps。",
+          "url": "https://bbs.hupu.com/642068439.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "B站社区视频",
+          "title": "来源内容",
+          "published": "",
+          "type": "观察记录",
+          "supports": "皮肤原画公布后，虎扑和B站相关帖子下出现了对英雄选择、配色和选手辨识度的质疑；有人认为奥莉安娜与崔丝塔娜不如亚索、阿卡丽或塞拉斯能让人立刻想到Caps。",
+          "url": "https://www.bilibili.com/video/BV1GKhP6CE8Q",
+          "eventTime": null
+        }
+      ]
+    },
+    {
+      "id": "lck-postseason-bracket-after-hle-t1",
+      "domainId": "lol",
+      "level": "important",
+      "status": "confirmed",
+      "eyebrow": "LCK",
+      "title": "HLE零封T1拿到第二，LCK季后赛三天后直接开打",
+      "summary": "HLE在常规赛收官战2比0击败T1，以第二名直通季后赛第二轮。GEN排名第一，T1与DK从第一轮打起；KT、BRO、NS、BFX将先用三场BO5争夺最后两个席位。",
+      "whyItMatters": "LCK没有留下长调整期：8月26日入围赛开打，8月29日进入季后赛第一轮。T1需要在零封失利后迅速准备自己的首轮对手。",
+      "readTime": "4 分钟",
+      "updatedLabel": "更新于 8 月 25 日 02:52",
+      "eventTime": "2026-08-23",
+      "facts": [
+        "8月23日，HLE在LCK常规赛收官战2比0击败T1。最终排名前四依次为GEN、HLE、T1和DK；GEN与HLE直通季后赛第二轮，T1与DK从第一轮开始。",
+        "赛后Faker表示，相比比赛结果，他对比赛内容更失望：第一局在他认为不该输的局面下告负，第二局则准备不足；他还说T1整个常规赛没有展现出持续进步。",
+        "HLE赛后采访中，Zeus说球队在常规赛末段提升了竞技状态，并称季后赛对手会觉得HLE很难打。他还成为LCK第三位达到1500击杀的上单选手。",
+        "入围赛从8月26日起连续三天进行：KT对BRO的胜者直接晋级；8月27日NS对BFX，败者出局；8月28日由首战败者对阵次战胜者，决定最后一个季后赛席位。三场均为BO5。"
+      ],
+      "factSourceIndexes": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "analysis": [],
+      "timeline": [
+        {
+          "time": "8月23日",
+          "text": "HLE 2比0击败T1，常规赛收官。"
+        },
+        {
+          "time": "8月26日至28日",
+          "text": "KT、BRO、NS、BFX争夺两个季后赛席位。"
+        },
+        {
+          "time": "8月29日",
+          "text": "LCK季后赛第一轮开始。"
+        }
+      ],
+      "cultureNotes": [],
+      "sources": [
+        {
+          "publisher": "虎扑社区",
+          "title": "[流言板]LCK常规赛最终排名：GEN、HLE、T1前三，Chovy POM点数最多",
+          "published": "",
+          "type": "观察记录",
+          "supports": "8月23日，HLE在LCK常规赛收官战2比0击败T1。最终排名前四依次为GEN、HLE、T1和DK；GEN与HLE直通季后赛第二轮，T1与DK从第一轮开始。",
+          "url": "https://bbs.hupu.com/642057888.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "LoL Esports",
+          "title": "LoL Esports | LCK Schedule",
+          "published": "",
+          "type": "官方赛程页",
+          "supports": "HLE对T1赛果与季后赛日程",
+          "url": "https://lolesports.com/en-GB/leagues/lck",
+          "eventTime": "2026-08-23"
+        },
+        {
+          "publisher": "虎扑社区",
+          "title": "[韩网翻译]Faker：相比于今天的比赛结果，我对比赛内容感到非常失望",
+          "published": "8 月 25 日 00:27",
+          "type": "观察记录",
+          "supports": "赛后Faker表示，相比比赛结果，他对比赛内容更失望：第一局在他认为不该输的局面下告负，第二局则准备不足；他还说T1整个常规赛没有展现出持续进步。",
+          "url": "https://bbs.hupu.com/642039549.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "虎扑社区",
+          "title": "[韩网翻译]Zeus：想健康长久地延续职业生涯；季后赛对手会觉得我们很难打",
+          "published": "8 月 25 日 01:04",
+          "type": "观察记录",
+          "supports": "HLE赛后采访中，Zeus说球队在常规赛末段提升了竞技状态，并称季后赛对手会觉得HLE很难打。他还成为LCK第三位达到1500击杀的上单选手。",
+          "url": "https://bbs.hupu.com/642039193.html",
+          "eventTime": null
+        },
+        {
+          "publisher": "公开网页",
+          "title": "LCK官推更新入围赛赛程：26日16点KT打BRO，27日NS打BFX",
+          "published": "",
+          "type": "观察记录",
+          "supports": "入围赛从8月26日起连续三天进行：KT对BRO的胜者直接晋级；8月27日NS对BFX，败者出局；8月28日由首战败者对阵次战胜者，决定最后一个季后赛席位。三场均为BO5。",
+          "url": "https://news.zhibo8.com/game/2026-08-24/6a8c0dfd53a16native.htm",
+          "eventTime": null
+        },
+        {
+          "publisher": "Etoday",
+          "title": "LCK 정규 시즌 끝⋯플레이-인 대진표ㆍ플레이오프 일정 한눈에",
+          "published": "8 月 24 日 09:04",
+          "type": "赛程报道",
+          "supports": "入围赛三场对阵、晋级关系与BO5赛制",
+          "url": "https://www.etoday.co.kr/news/view/2617335",
+          "eventTime": "2026-08-26"
+        }
+      ]
+    }
+  ]
+}

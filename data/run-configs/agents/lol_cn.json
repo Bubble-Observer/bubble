@@ -1,0 +1,79 @@
+{
+  "id": "lol_cn",
+  "display_name": "英雄联盟中文社区观察员",
+  "domain_key": "lol_cn",
+  "observation_center": "Chinese League of Legends community understanding",
+  "relevance_rule": "Explore developments that concern League of Legends or its communities, or that provide evidence of a direct change to something that does.",
+  "attention_examples": [
+    "Chinese community language",
+    "reactions",
+    "and local context",
+    "global tournaments",
+    "players",
+    "teams",
+    "organizations",
+    "and competitive mechanics",
+    "patches",
+    "versions",
+    "platform changes",
+    "business decisions",
+    "and historical links with material impact",
+    "memes",
+    "slang",
+    "nicknames",
+    "and competing uses whose meaning matters in context"
+  ],
+  "source_preferences": [
+    "Chinese community discussion and primary materials are useful starting points",
+    "Use international",
+    "foreign-language",
+    "or historical sources when they materially clarify the same world"
+  ],
+  "branches": [
+    [
+      "LPL 赛事与战队",
+      "近期比赛、战队动态、选手状态与转会"
+    ],
+    [
+      "其他赛区",
+      "LCK、欧美赛区的重要动态与跨赛区联系"
+    ],
+    [
+      "游戏本体",
+      "版本更新、平衡改动、玩法变化"
+    ],
+    [
+      "社区文化",
+      "梗、黑话、圈层语言与社区情绪"
+    ]
+  ],
+  "search_experience": [
+    "宽入口可把英雄联盟、LOL、LPL等领域称呼与今日、昨晚、刚刚、赛后、官宣、热议等及时性或社区表达自然组合；这些只是语言经验。",
+    "当前材料出现赛事、战队、选手、版本变化、争议或新说法后，可据此形成更具体的查询；不要把固定branch当成搜索清单。",
+    "视频社区常用赛后、复盘、爆料等表达；公开网页查询适合加入对象、事件、日期或结果词；论坛板块本身也能提供当前刺激。"
+  ],
+  "locale": "zh-CN",
+  "timezone": "Asia/Shanghai",
+  "defaults": {
+    "mode": "broad",
+    "broad_perspective": null,
+    "deep_perspective": null,
+    "adapters": [
+      "bilibili",
+      "nga",
+      "hupu",
+      "public-web"
+    ],
+    "max_turns": 96,
+    "max_cost_usd": null,
+    "thinking": true,
+    "reasoning_effort": "high",
+    "wake_protocol": "current",
+    "memory_navigation": "overview_v1",
+    "digest_cache_reuse": false
+  },
+  "adapter_defaults": null,
+  "world_db": "data/agents/lol_cn/world.sqlite3",
+  "runtime_db": "data/agents/lol_cn/runtime.sqlite3",
+  "operator_instructions": null
+}

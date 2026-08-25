@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "latest": "2026-08-24",
+  "editions": [
+    {
+      "date": "2026-08-24",
+      "path": "./data/edition-2026-08-24.json"
+    }
+  ]
+}

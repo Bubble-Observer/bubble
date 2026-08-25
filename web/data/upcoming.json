@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "1.0",
+  "sourceLatest": "2026-08-24",
+  "events": [
+    {
+      "dateLabel": "8月25日",
+      "time": "19:00",
+      "title": "咕咕电竞杯直播开始",
+      "note": "8月24日Doinb直播回放标题预告，次日19:00直播LOL比赛“咕咕电竞杯”。",
+      "status": "scheduled",
+      "sources": [
+        {
+          "publisher": "B站社区视频",
+          "title": "【纯净】【Doinb】直播回放08月24日:明天7点直播 lol比赛 咕咕电竞杯",
+          "published": "8 月 24 日 19:53",
+          "type": "日程证据",
+          "supports": "支持日程：咕咕电竞杯直播开始",
+          "url": "https://www.bilibili.com/video/BV1ULhP6qEge",
+          "eventTime": null
+        }
+      ],
+      "eventId": "lol::2026-08-25::19:00::咕咕电竞杯直播开始",
+      "date": "2026-08-25",
+      "sourceDomainId": "lol",
+      "sourceDomainLabel": "LOL",
+      "sourceEditionDate": "2026-08-24"
+    },
+    {
+      "dateLabel": "8月26日",
+      "time": "16:00",
+      "title": "LCK入围赛：KT对BRO",
+      "note": "BO5，胜者直接晋级季后赛。",
+      "status": "scheduled",
+      "sources": [
+        {
+          "publisher": "公开网页",
+          "title": "LCK官推更新入围赛赛程：26日16点KT打BRO，27日NS打BFX",
+          "published": "",
+          "type": "日程证据",
+          "supports": "支持日程：LCK入围赛：KT对BRO",
+          "url": "https://news.zhibo8.com/game/2026-08-24/6a8c0dfd53a16native.htm",
+          "eventTime": null
+        }
+      ],
+      "eventId": "lol::2026-08-26::16:00::lck入围赛：kt对bro",
+      "date": "2026-08-26",
+      "sourceDomainId": "lol",
+      "sourceDomainLabel": "LOL",
+      "sourceEditionDate": "2026-08-24"
+    },
+    {
+      "dateLabel": "8月27日",
+      "time": "16:00",
+      "title": "LCK入围赛：NS对BFX",
+      "note": "BO5，败者赛季结束；胜者将在次日继续争夺最后一个席位。",
+      "status": "scheduled",
+      "sources": [
+        {
+          "publisher": "公开网页",
+          "title": "LCK官推更新入围赛赛程：26日16点KT打BRO，27日NS打BFX",
+          "published": "",
+          "type": "日程证据",
+          "supports": "支持日程：LCK入围赛：NS对BFX",
+          "url": "https://news.zhibo8.com/game/2026-08-24/6a8c0dfd53a16native.htm",
+          "eventTime": null
+        }
+      ],
+      "eventId": "lol::2026-08-27::16:00::lck入围赛：ns对bfx",
+      "date": "2026-08-27",
+      "sourceDomainId": "lol",
+      "sourceDomainLabel": "LOL",
+      "sourceEditionDate": "2026-08-24"
+    },
+    {
+      "dateLabel": "8月28日",
+      "time": "14:00",
+      "title": "LPL骑士之路：EDG对NIP",
+      "note": "BO5，胜者晋级季后赛。",
+      "status": "scheduled",
+      "sources": [
+        {
+          "publisher": "公开网页",
+          "title": "LPL第三赛段骑士之路对阵出炉：iG vs TT、NIP vs EDG",
+          "published": "",
+          "type": "日程证据",
+          "supports": "支持日程：LPL骑士之路：EDG对NIP",
+          "url": "https://news.zhibo8.com/game/2026-08-22/6a898933a7d70native.htm",
+          "eventTime": null
+        },
+        {
+          "publisher": "LoL Esports",
+          "title": "LoL Esports | LPL Schedule",
+          "published": "",
+          "type": "官方赛程页",
+          "supports": "8月28日骑士之路开赛时间",
+          "url": "https://lolesports.com/en-GB/leagues/lpl",
+          "eventTime": "2026-08-28T14:00:00+08:00"
+        }
+      ],
+      "eventId": "lol::2026-08-28::14:00::lpl骑士之路：edg对nip",
+      "date": "2026-08-28",
+      "sourceDomainId": "lol",
+      "sourceDomainLabel": "LOL",
+      "sourceEditionDate": "2026-08-24"
+    },
+    {
+      "dateLabel": "8月28日",
+      "time": "17:00",
+      "title": "LPL骑士之路：TT对iG",
+      "note": "BO5，胜者晋级季后赛。",
+      "status": "scheduled",
+      "sources": [
+        {
+          "publisher": "公开网页",
+          "title": "LPL第三赛段骑士之路对阵出炉：iG vs TT、NIP vs EDG",
+          "published": "",
+          "type": "日程证据",
+          "supports": "支持日程：LPL骑士之路：TT对iG",
+          "url": "https://news.zhibo8.com/game/2026-08-22/6a898933a7d70native.htm",
+          "eventTime": null
+        },
+        {
+          "publisher": "LoL Esports",
+          "title": "LoL Esports | LPL Schedule",
+          "published": "",
+          "type": "官方赛程页",
+          "supports": "8月28日骑士之路第二场开赛时间",
+          "url": "https://lolesports.com/en-GB/leagues/lpl",
+          "eventTime": "2026-08-28T17:00:00+08:00"
+        }
+      ],
+      "eventId": "lol::2026-08-28::17:00::lpl骑士之路：tt对ig",
+      "date": "2026-08-28",
+      "sourceDomainId": "lol",
+      "sourceDomainLabel": "LOL",
+      "sourceEditionDate": "2026-08-24"
+    },
+    {
+      "dateLabel": "9月10日",
+      "time": "",
+      "title": "Caps名人堂游戏内活动开启",
+      "note": "100级通行证与崔丝塔娜三档套装同步开放。",
+      "status": "scheduled",
+      "sources": [
+        {
+          "publisher": "Riot Games",
+          "title": "Hall of Legends 2026 - Caps | League of Legends Hall of Fame",
+          "published": "8 月 24 日 23:00",
+          "type": "官方活动页",
+          "supports": "Caps名人堂活动开始日期",
+          "url": "https://halloflegends.leagueoflegends.com/en-us/",
+          "eventTime": "2026-09-10"
+        }
+      ],
+      "eventId": "lol::2026-09-10::::caps名人堂游戏内活动开启",
+      "date": "2026-09-10",
+      "sourceDomainId": "lol",
+      "sourceDomainLabel": "LOL",
+      "sourceEditionDate": "2026-08-24"
+    }
+  ]
+}
