@@ -14,8 +14,12 @@
 </p>
 
 <p align="center">
-  <img alt="Python >= 3.11" src="https://img.shields.io/badge/python-%3E%3D3.11-blue">
-  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Python-3.11%2B-blue?logo=python&logoColor=white" alt="Python 3.11+" />
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT" />
+  </a>
 </p>
 
 ## 让 Agent 在一个领域里待下来
@@ -182,7 +186,7 @@ DEMO PASSED: four wakes ...
 bubble-console
 ```
 
-然后浏览器打开 http://127.0.0.1:8765。控制台是本地管理界面：查看世界记忆、
+然后浏览器打开 http://127.0.0.1:8765 控制台是本地管理界面：查看世界记忆、
 启动/恢复运行、管理 Agent 配置、手动收尾滞留的未发布工作图。它只监听回环地址
 （非 loopback host 会被拒绝），不会对外提供服务。
 
